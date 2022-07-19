@@ -7,12 +7,14 @@ int Prompt(string length)
 }
 
 void PrintNumbers (int n,int m)
-{   System.Console.Write($" '(");
-    for (n = n ; n < m; n++)
+{   
+    if (n <= m)
     {
-        System.Console.Write($"{n},");
+        
+        System.Console.Write($"{n}'");
+        PrintNumbers (n+1,m);
     }
-    System.Console.Write($"{n})'");
+    
 }
 int n = Prompt("Введите первое число: ");
 int m = Prompt("Введите второе число: ");
