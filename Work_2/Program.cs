@@ -11,12 +11,12 @@ int SumNumbers(int n,int m,int sum)
     {
     sum = sum+n;
     n++;
-    sum = SumNumbers(n,m,sum );
+    sum = SumNumbers(n,m,sum+n );
     }
     return sum;
 }
 int n = Prompt("Введите первое число: ");
 int m = Prompt("Введите второе число: ");
 int sum = SumNumbers(n,m,0);
-System.Console.Write($"Сумма чисел от {n} + {m} = {sum}");
+System.Console.Write($"Сумма чисел от {n} до {m} = {sum}");
 
